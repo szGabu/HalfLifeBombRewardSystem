@@ -1,4 +1,4 @@
-# HLDM Bomb Award System
+# HLDM Bomb Reward System
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![AMX Mod X](https://img.shields.io/badge/AMXX%201.9-Required-orange)
