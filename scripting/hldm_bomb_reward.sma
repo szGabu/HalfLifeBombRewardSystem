@@ -1,4 +1,9 @@
 #include <amxmodx>
+
+#if AMXX_VERSION_NUM < 183
+#assert "AMX Mod X versions 1.8.2 and below are not supported."
+#endif
+
 #include <amxmisc>
 #include <engine>
 #include <fakemeta>
@@ -46,8 +51,10 @@ public plugin_init()
 {
     register_plugin(PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_AUTHOR);
 
-    g_cvarPluginEnabled = create_cvar("amx_bomb_award_enabled", "1", FCVAR_NONE, "Enables the plugin.", true, 0.0, true, 1.0);
-    g_cvarModernDetectMethod = create_cvar("amx_bomb_award_new_detection", "1", FCVAR_NONE, "Uses a newer detection of the blast zone rather than looping & checking bounds which is slow, unreliable and doesn't even work on newer maps with complex blast zones. Leave it on 1 unless you know what are you doing.", true, 0.0, true, 1.0);
+    g_cvarPluginEnabled = create_cvar("amx_bomb_reward_enabled", "1", FCVAR_NONE, "Enables the plugin.", true, 0.0, true, 1.0);
+    g_cvarModernDetectMethod = create_cvar("amx_bomb_reward_new_detection", "1", FCVAR_NONE, "Uses a newer detection of the blast zone rather than looping & checking bounds which is slow, unreliable and doesn't even work on newer maps with complex blast zones. Leave it on 1 unless you know what are you doing.", true, 0.0, true, 1.0);
+
+    AutoExecConfig();
 }
 
 public plugin_cfg()
@@ -65,19 +72,24 @@ public plugin_cfg()
         RegisterHam(Ham_Use, "trigger_hurt", "Event_TriggerHurtUse_Post", true);
         RegisterHam(Ham_Touch, "trigger_multiple", "Event_TriggerMultipleTouch_Post", true);
         RegisterHam(Ham_Use, "func_button", "Event_FuncButtonUse_Pre");
-        RegisterHam(Ham_Killed, "player", "Event_PlayerKilled_Pre", 0);
+        RegisterHam(Ham_Killed, "player", "Event_PlayerKilled_Pre");
         register_message(get_user_msgid("DeathMsg"), "Message_DeathMsg");
         register_dictionary("hldm_bomb_reward.txt");
         
-        server_print("[Bomb Award] Loaded configuration for map: %s", g_szCurrentMap);
-        server_print("[Bomb Award] Z Threshold: %.1f, Bomb Time: %d", g_flZThreshold, g_fMapBombTime);
-        server_print("[Bomb Award] Entity Target: %s, Damage Targetname: %s", g_szEntityTarget, g_szDamageTargetname);
+        server_print("[Bomb Reward] Loaded configuration for map: %s", g_szCurrentMap);
+        server_print("[Bomb Reward] Z Threshold: %.1f, Bomb Time: %d", g_flZThreshold, g_fMapBombTime);
+        server_print("[Bomb Reward] Entity Target: %s, Damage Targetname: %s", g_szEntityTarget, g_szDamageTargetname);
     }
     else 
     {
-        server_print("[Bomb Award] No configuration found for map: %s. Plugin paused.", g_szCurrentMap);
+        server_print("[Bomb Reward] No configuration found for map: %s. Plugin paused.", g_szCurrentMap);
         pause("ad");
     }
+}
+
+public OnConfigsExecuted()
+{
+    create_cvar("amx_bomb_reward_version", PLUGIN_VERSION, FCVAR_SERVER);
 }
 
 public InitializeVars()
@@ -101,12 +113,12 @@ public bool:LoadMapConfig()
     new szConfigsDir[PLATFORM_MAX_PATH];
     new szMapConfig[PLATFORM_MAX_PATH];
     get_configsdir(szConfigsDir, charsmax(szConfigsDir))
-    formatex(szMapConfig, charsmax(szMapConfig), "%s/bomb_award/%s.ini", szConfigsDir, g_szCurrentMap);
+    formatex(szMapConfig, charsmax(szMapConfig), "%s/bomb_reward/%s.ini", szConfigsDir, g_szCurrentMap);
     
     // Check if the config file exists
     if(!file_exists(szMapConfig))
     {
-        server_print("[Bomb Award] Configuration file not found: %s", szMapConfig);
+        server_print("[Bomb Reward] Configuration file not found: %s", szMapConfig);
         return false;
     }
     
@@ -114,7 +126,7 @@ public bool:LoadMapConfig()
     new iFileHandle = fopen(szMapConfig, "rt");
     if(!iFileHandle)
     {
-        server_print("[Bomb Award] Failed to open configuration file: %s", szMapConfig);
+        server_print("[Bomb Reward] Failed to open configuration file: %s", szMapConfig);
         return false;
     }
     
@@ -162,11 +174,11 @@ public bool:LoadMapConfig()
     // Verify required fields are set
     if(strlen(g_szEntityTarget) == 0 || strlen(g_szDamageTargetname) == 0)
     {
-        server_print("[Bomb Award] Configuration is incomplete. Values detected:");
-        server_print("[Bomb Award] g_flZThreshold: %f", g_flZThreshold);
-        server_print("[Bomb Award] g_fMapBombTime: %d", g_fMapBombTime);
-        server_print("[Bomb Award] g_szEntityTarget: %s", g_szEntityTarget);
-        server_print("[Bomb Award] g_szDamageTargetname: %s", g_szDamageTargetname);
+        server_print("[Bomb Reward] Configuration is incomplete. Values detected:");
+        server_print("[Bomb Reward] g_flZThreshold: %f", g_flZThreshold);
+        server_print("[Bomb Reward] g_fMapBombTime: %d", g_fMapBombTime);
+        server_print("[Bomb Reward] g_szEntityTarget: %s", g_szEntityTarget);
+        server_print("[Bomb Reward] g_szDamageTargetname: %s", g_szDamageTargetname);
         return false;
     }
 
