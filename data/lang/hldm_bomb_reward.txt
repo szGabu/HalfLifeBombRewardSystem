@@ -1,0 +1,215 @@
+[en]
+BOMB_ACTIVATED = %s has activated the nuke^nPlayers inside the bunker will be awarded the kills
+BOMB_ACTIVATED_UNKNOWN = Someone has activated the nuke^nPlayers inside the bunker will be awarded the kills
+BOMB_INSIDE_NO_ONE = No one is inside the bunker
+BOMB_INSIDE = Players Inside the Bunker:^n%s
+BOMB_KILLS = * Nuke kills are awarded to the following players inside the bunker in a round-robin fashion:
+BOMB_KILLS_PITY = * %s was also awarded an extra frag for activating the nuke.
+BOMB_SURVIVED = * The following players survived the nuclear blast, they are awarded 1 frag each:
+
+[es]
+BOMB_ACTIVATED = %s ha activado la bomba nuclear^nLos jugadores dentro del bunker recibiran las kills
+BOMB_ACTIVATED_UNKNOWN = Alguien ha activado la bomba nuclear^nLos jugadores dentro del bunker recibiran las kills
+BOMB_INSIDE_NO_ONE = Nadie esta dentro del bunker
+BOMB_INSIDE = Jugadores dentro del bunker:^n%s
+BOMB_KILLS = * Las kills de la bomba nuclear se otorgan a los siguientes jugadores dentro del búnker de forma rotativa:
+BOMB_KILLS_PITY = * A %s también se le otorgó un punto extra por activar la bomba nuclear.
+BOMB_SURVIVED = * Los siguientes jugadores sobrevivieron el impacto nuclear, ganan un punto cada uno:
+
+[bp]
+BOMB_ACTIVATED = %s ativou a bomba nuclear^nOs jogadores dentro do bunker receberão as kills
+BOMB_ACTIVATED_UNKNOWN = Alguem ativou a bomba nuclear^nOs jogadores dentro do bunker receberão as kills
+BOMB_INSIDE_NO_ONE = Ninguem esta dentro do bunker
+BOMB_INSIDE = Jogadores dentro do bunker:^n%s
+BOMB_KILLS = * As kills da bomba nuclear são distribuídas entre os seguintes jogadores no bunker, em sistema de rodízio:
+BOMB_KILLS_PITY = * %s também recebeu uma kill extra por ativar a bomba nuclear.
+BOMB_SURVIVED = * Os seguintes jogadores sobreviveram à explosão nuclear, cada um recebe uma kill:
+
+[de]
+BOMB_ACTIVATED = %s hat die Atombombe aktiviert^nSpieler im Bunker erhalten die Kills
+BOMB_ACTIVATED_UNKNOWN = Jemand hat die Atombombe aktiviert^nSpieler im Bunker erhalten die Kills
+BOMB_INSIDE_NO_ONE = Niemand ist im Bunker
+BOMB_INSIDE = Spieler im Bunker:^n%s
+BOMB_KILLS = * Die Nuklear-Kills werden den folgenden Spielern im Bunker im Rotationsverfahren zugewiesen:
+BOMB_KILLS_PITY = * %s erhielt außerdem einen zusätzlichen Kill für das Aktivieren der Atombombe.
+BOMB_SURVIVED = * Die folgenden Spieler haben die nukleare Explosion überlebt und erhalten jeweils 1 Kill:
+
+[sr]
+BOMB_ACTIVATED = %s je aktivirao nuklearnu bombu^nIgrači u bunkeru će dobiti ubistva
+BOMB_ACTIVATED_UNKNOWN = Neko je aktivirao nuklearnu bombu^nIgrači u bunkeru će dobiti ubistva
+BOMB_INSIDE_NO_ONE = Niko nije u bunkeru
+BOMB_INSIDE = Igrači u bunkeru:^n%s
+BOMB_KILLS = * Ubistva nuklearkom se dodeljuju sledećim igračima u bunkeru naizmenično:
+BOMB_KILLS_PITY = * %s je takođe dobio dodatno ubistvo za aktiviranje nuklearke.
+BOMB_SURVIVED = * Sledeći igrači su preživeli nuklearnu eksploziju i dobijaju po 1 poen:
+
+[sv]
+BOMB_ACTIVATED = %s har aktiverat kärnvapnet^nSpelare i bunkern får poängen
+BOMB_ACTIVATED_UNKNOWN = Någon har aktiverat kärnvapnet^nSpelare i bunkern får poängen
+BOMB_INSIDE_NO_ONE = Ingen är i bunkern
+BOMB_INSIDE = Spelare i bunkern:^n%s
+BOMB_KILLS = * Kärnvapenspoäng tilldelas följande spelare i bunkern i turordning:
+BOMB_KILLS_PITY = * %s fick också en extra poäng för att ha aktiverat kärnvapnet.
+BOMB_SURVIVED = * Följande spelare överlevde den nukleära explosionen och belönas med 1 poäng var:
+
+[fr]
+BOMB_ACTIVATED = %s a activé la bombe nucléaire^nLes joueurs dans le bunker recevront les kills
+BOMB_ACTIVATED_UNKNOWN = Quelqu’un a activé la bombe nucléaire^nLes joueurs dans le bunker recevront les kills
+BOMB_INSIDE_NO_ONE = Personne n’est dans le bunker
+BOMB_INSIDE = Joueurs dans le bunker:^n%s
+BOMB_KILLS = * Les kills de la bombe sont attribués aux joueurs suivants dans le bunker en rotation:
+BOMB_KILLS_PITY = * %s a également reçu un kill supplémentaire pour avoir activé la bombe.
+BOMB_SURVIVED = * Les joueurs suivants ont survécu à l'explosion nucléaire et reçoivent chacun 1 point:
+
+[tr]
+BOMB_ACTIVATED = %s nükleer bombayı aktive etti^nSığınaktaki oyunculara kill verilecek
+BOMB_ACTIVATED_UNKNOWN = Biri nükleer bombayı aktive etti^nSığınaktaki oyunculara kill verilecek
+BOMB_INSIDE_NO_ONE = Sığınakta kimse yok
+BOMB_INSIDE = Sığınaktaki oyuncular:^n%s
+BOMB_KILLS = * Nükleer killler sırayla aşağıdaki sığınak oyuncularına verilecek:
+BOMB_KILLS_PITY = * %s ayrıca nükleer bombayı aktive ettiği için ekstra bir kill aldı.
+BOMB_SURVIVED = * Aşağıdaki oyuncular nükleer patlamadan sağ kurtuldu, her birine 1 puan verildi:
+
+[cz]
+BOMB_ACTIVATED = %s aktivoval jadernou bombu^nHráči uvnitř bunkru obdrží killy
+BOMB_ACTIVATED_UNKNOWN = Někdo aktivoval jadernou bombu^nHráči uvnitř bunkru obdrží killy
+BOMB_INSIDE_NO_ONE = Nikdo není v bunkru
+BOMB_INSIDE = Hráči v bunkru:^n%s
+BOMB_KILLS = * Killy z jaderné bomby jsou přiděleny následujícím hráčům v bunkru střídavě:
+BOMB_KILLS_PITY = * %s také obdržel extra kill za aktivaci jaderné bomby.
+BOMB_SURVIVED = * Následující hráči přežili jaderný výbuch a každý získává 1 bod:
+
+[nl]
+BOMB_ACTIVATED = %s heeft de kernbom geactiveerd^nSpelers in de bunker krijgen de kills
+BOMB_ACTIVATED_UNKNOWN = Iemand heeft de kernbom geactiveerd^nSpelers in de bunker krijgen de kills
+BOMB_INSIDE_NO_ONE = Niemand is in de bunker
+BOMB_INSIDE = Spelers in de bunker:^n%s
+BOMB_KILLS = * De kills van de kernbom worden verdeeld onder de volgende spelers in de bunker op een beurtbasis:
+BOMB_KILLS_PITY = * %s kreeg ook een extra kill voor het activeren van de kernbom.
+BOMB_SURVIVED = * De volgende spelers hebben de nucleaire explosie overleefd en krijgen elk 1 punt:
+
+[pl]
+BOMB_ACTIVATED = %s aktywował bombę nuklearną^nGracze w bunkrze otrzymają zabójstwa
+BOMB_ACTIVATED_UNKNOWN = Ktoś aktywował bombę nuklearną^nGracze w bunkrze otrzymają zabójstwa
+BOMB_INSIDE_NO_ONE = Nikt nie jest w bunkrze
+BOMB_INSIDE = Gracze w bunkrze:^n%s
+BOMB_KILLS = * Zabójstwa z bomby nuklearnej są przyznawane następującym graczom w bunkrze rotacyjnie:
+BOMB_KILLS_PITY = * %s otrzymał także dodatkowe zabójstwo za aktywację bomby nuklearnej.
+BOMB_SURVIVED = * Następujący gracze przeżyli wybuch nuklearny i otrzymują po 1 punkcie:
+
+[da]
+BOMB_ACTIVATED = %s har aktiveret atombomben^nSpillere i bunkeren får drabene
+BOMB_ACTIVATED_UNKNOWN = Nogen har aktiveret atombomben^nSpillere i bunkeren får drabene
+BOMB_INSIDE_NO_ONE = Ingen er i bunkeren
+BOMB_INSIDE = Spillere i bunkeren:^n%s
+BOMB_KILLS = * Drab fra atombomben tildeles følgende spillere i bunkeren efter tur:
+BOMB_KILLS_PITY = * %s fik også et ekstra drab for at aktivere atombomben.
+BOMB_SURVIVED = * Følgende spillere overlevede den nukleare eksplosion og tildeles hver 1 point:
+
+[bg]
+BOMB_ACTIVATED = %s активира ядрената бомба^nИграчите в бункера ще получат убийствата
+BOMB_ACTIVATED_UNKNOWN = Някой активира ядрената бомба^nИграчите в бункера ще получат убийствата
+BOMB_INSIDE_NO_ONE = Няма никой в бункера
+BOMB_INSIDE = Играчите в бункера:^n%s
+BOMB_KILLS = * Убийствата от ядрената бомба се разпределят между следните играчи в бункера по ротация:
+BOMB_KILLS_PITY = * %s също получи допълнително убийство за активиране на бомбата.
+BOMB_SURVIVED = * Следните играчи оцеляха при ядрената експлозия и получават по 1 точка:
+
+[ro]
+BOMB_ACTIVATED = %s a activat bomba nucleară^nJucătorii din buncăr vor primi kill-urile
+BOMB_ACTIVATED_UNKNOWN = Cineva a activat bomba nucleară^nJucătorii din buncăr vor primi kill-urile
+BOMB_INSIDE_NO_ONE = Nimeni nu este în buncăr
+BOMB_INSIDE = Jucători în buncăr:^n%s
+BOMB_KILLS = * Kill-urile nucleare sunt acordate următorilor jucători din buncăr în mod rotativ:
+BOMB_KILLS_PITY = * %s a primit și un kill suplimentar pentru activarea bombei.
+BOMB_SURVIVED = * Următorii jucători au supraviețuit exploziei nucleare și primesc câte 1 punct:
+
+[hu]
+BOMB_ACTIVATED = %s aktiválta az atombombát^nA bunkerben lévő játékosok kapják a gyilkosságokat
+BOMB_ACTIVATED_UNKNOWN = Valaki aktiválta az atombombát^nA bunkerben lévő játékosok kapják a gyilkosságokat
+BOMB_INSIDE_NO_ONE = Senki sincs a bunkerben
+BOMB_INSIDE = Játékosok a bunkerben:^n%s
+BOMB_KILLS = * Az atombombás gyilkosságokat körforgásban kapják meg az alábbi bunkerben lévő játékosok:
+BOMB_KILLS_PITY = * %s extra gyilkosságot is kapott az atombomba aktiválásáért.
+BOMB_SURVIVED = * A következő játékosok túlélték a nukleáris robbanást, és mindegyik 1 pontot kap:
+
+[lt]
+BOMB_ACTIVATED = %s aktyvavo branduolinę bombą^nŽaidėjai bunkeryje gaus nužudymus
+BOMB_ACTIVATED_UNKNOWN = Kažkas aktyvavo branduolinę bombą^nŽaidėjai bunkeryje gaus nužudymus
+BOMB_INSIDE_NO_ONE = Niekas nėra bunkeryje
+BOMB_INSIDE = Žaidėjai bunkeryje:^n%s
+BOMB_KILLS = * Branduolinės bombos nužudymai paskirstomi tarp šių bunkeryje esančių žaidėjų paeiliui:
+BOMB_KILLS_PITY = * %s taip pat gavo papildomą nužudymą už bombos aktyvavimą.
+BOMB_SURVIVED = * Šie žaidėjai išgyveno branduolinį sprogimą ir kiekvienas gauna po 1 tašką:
+
+[sk]
+BOMB_ACTIVATED = %s aktivoval jadrovú bombu^nHráči v bunkri získajú zabitia
+BOMB_ACTIVATED_UNKNOWN = Niekto aktivoval jadrovú bombu^nHráči v bunkri získajú zabitia
+BOMB_INSIDE_NO_ONE = Nikto nie je v bunkri
+BOMB_INSIDE = Hráči v bunkri:^n%s
+BOMB_KILLS = * Zabitia z jadrovej bomby sa prideľujú nasledovným hráčom v bunkri striedavo:
+BOMB_KILLS_PITY = * %s dostal tiež jedno extra zabitie za aktivovanie jadrovej bomby.
+BOMB_SURVIVED = * Nasledujúci hráči prežili jadrový výbuch a získavajú po 1 bode:
+
+[mk]
+BOMB_ACTIVATED = %s ја активираше нуклеарната бомба^nИграчите во бункерот ќе ги добијат убиствата
+BOMB_ACTIVATED_UNKNOWN = Некој ја активираше нуклеарната бомба^nИграчите во бункерот ќе ги добијат убиствата
+BOMB_INSIDE_NO_ONE = Никој не е во бункерот
+BOMB_INSIDE = Играчи во бункерот:^n%s
+BOMB_KILLS = * Убиства од нуклеарната бомба се доделуваат на следниве играчи во бункерот по ред:
+BOMB_KILLS_PITY = * %s исто така доби дополнително убиство за активирање на бомбата.
+BOMB_SURVIVED = * Следниве играчи ја преживеаја нуклеарната експлозија и добиваат по 1 поен:
+
+[hr]
+BOMB_ACTIVATED = %s je aktivirao nuklearnu bombu^nIgrači u bunkeru dobit će killove
+BOMB_ACTIVATED_UNKNOWN = Netko je aktivirao nuklearnu bombu^nIgrači u bunkeru dobit će killove
+BOMB_INSIDE_NO_ONE = Nitko nije u bunkeru
+BOMB_INSIDE = Igrači u bunkeru:^n%s
+BOMB_KILLS = * Killovi od nuklearne bombe dodjeljuju se sljedećim igračima u bunkeru naizmjenično:
+BOMB_KILLS_PITY = * %s je također dobio dodatni kill za aktivaciju bombe.
+BOMB_SURVIVED = * Sljedeći igrači su preživjeli nuklearnu eksploziju i dobivaju po 1 bod:
+
+[bs]
+BOMB_ACTIVATED = %s je aktivirao nuklearnu bombu^nIgrači u bunkeru će dobiti killove
+BOMB_ACTIVATED_UNKNOWN = Neko je aktivirao nuklearnu bombu^nIgrači u bunkeru će dobiti killove
+BOMB_INSIDE_NO_ONE = Niko nije u bunkeru
+BOMB_INSIDE = Igrači u bunkeru:^n%s
+BOMB_KILLS = * Killovi od nuklearne bombe se ravnomjerno dodjeljuju sljedećim igračima u bunkeru:
+BOMB_KILLS_PITY = * %s je također dobio dodatni kill za aktiviranje bombe.
+BOMB_SURVIVED = * Sljedeći igrači su preživjeli nuklearnu eksploziju i dobivaju po 1 poen:
+
+[ru]
+BOMB_ACTIVATED = %s активировал ядерную бомбу^nИгроки в бункере получат убийства
+BOMB_ACTIVATED_UNKNOWN = Кто-то активировал ядерную бомбу^nИгроки в бункере получат убийства
+BOMB_INSIDE_NO_ONE = В бункере никого нет
+BOMB_INSIDE = Игроки в бункере:^n%s
+BOMB_KILLS = * Убийства от ядерной бомбы распределяются между следующими игроками в бункере по очереди:
+BOMB_KILLS_PITY = * %s также получил дополнительное убийство за активацию бомбы.
+BOMB_SURVIVED = * Следующие игроки выжили после ядерного взрыва и получают по 1 очко:
+
+[cn]
+BOMB_ACTIVATED = %s启动了核弹^n在掩体内的玩家将获得击杀
+BOMB_ACTIVATED_UNKNOWN = 有人启动了核弹^n在掩体内的玩家将获得击杀
+BOMB_INSIDE_NO_ONE = 掩体内无人
+BOMB_INSIDE = 掩体内的玩家:^n%s
+BOMB_KILLS = * 核弹击杀将以轮换方式分配给以下掩体内的玩家：
+BOMB_KILLS_PITY = * %s 还因启动核弹额外获得一次击杀。
+BOMB_SURVIVED = * 以下玩家在核爆中幸存，每人获得1分：
+
+[al]
+BOMB_ACTIVATED = %s ka aktivizuar bombën bërthamore^nLojtarët brenda bunkerit do të marrin vrasjet
+BOMB_ACTIVATED_UNKNOWN = Dikush ka aktivizuar bombën bërthamore^nLojtarët brenda bunkerit do të marrin vrasjet
+BOMB_INSIDE_NO_ONE = Askush nuk është në bunker
+BOMB_INSIDE = Lojtarët në bunker:^n%s
+BOMB_KILLS = * Vrasjet nga bomba bërthamore u ndahen lojtarëve në bunker me radhë:
+BOMB_KILLS_PITY = * %s gjithashtu mori një vrasje shtesë për aktivizimin e bombës.
+BOMB_SURVIVED = * Lojtarët e mëposhtëm i mbijetuan shpërthimit bërthamor dhe secili merr nga 1 pikë:
+
+[pt]
+BOMB_ACTIVATED = %s ativou a bomba nuclear^nOs jogadores dentro do bunker receberão as mortes
+BOMB_ACTIVATED_UNKNOWN = Alguém ativou a bomba nuclear^nOs jogadores dentro do bunker receberão as mortes
+BOMB_INSIDE_NO_ONE = Ninguém está no bunker
+BOMB_INSIDE = Jogadores no bunker:^n%s
+BOMB_KILLS = * As mortes da bomba nuclear são atribuídas aos seguintes jogadores no bunker de forma rotativa:
+BOMB_KILLS_PITY = * %s também recebeu uma morte extra por ativar a bomba nuclear.
+BOMB_SURVIVED = * Os seguintes jogadores sobreviveram à explosão nuclear e recebem 1 ponto cada um:
