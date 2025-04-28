@@ -10,7 +10,7 @@
 #include <hamsandwich>
 
 #define PLUGIN_NAME             "Half-Life Bomb Reward System"
-#define PLUGIN_VERSION          "1.0.0"
+#define PLUGIN_VERSION          "1.0.1-25w17a"
 #define PLUGIN_AUTHOR           "szGabu"
 
 #define BOMB_CLOCK_ID           548875487
@@ -39,6 +39,9 @@ new bool:g_bInsideBunkerRoundRobin[MAX_PLAYERS+1] = { false, ... };
 new bool:g_bOnBlastArea[MAX_PLAYERS+1] = { false, ... };
 new g_iBombActivator = 0;
 new Float:g_fBombTimer = 0.0;
+
+new g_hHudSyncObjectMessage;
+new g_hHudSyncObjectTimer;
 
 // Configuration variables
 new Float:g_flZThreshold = 0.0;
@@ -79,6 +82,9 @@ public plugin_cfg()
         server_print("[Bomb Reward] Loaded configuration for map: %s", g_szCurrentMap);
         server_print("[Bomb Reward] Z Threshold: %.1f, Bomb Time: %d", g_flZThreshold, g_fMapBombTime);
         server_print("[Bomb Reward] Entity Target: %s, Damage Targetname: %s", g_szEntityTarget, g_szDamageTargetname);
+
+        g_hHudSyncObjectMessage = CreateHudSyncObj();
+        g_hHudSyncObjectTimer = CreateHudSyncObj();
     }
     else 
     {
@@ -323,15 +329,15 @@ public Task_BombClock()
         if(is_user_connected(g_iBombActivator))
         {
             get_user_name(g_iBombActivator, szActivatorName, charsmax(szActivatorName));
-            show_hudmessage(0, "%L", LANG_PLAYER, "BOMB_ACTIVATED", szActivatorName);
+            ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_ACTIVATED", szActivatorName);
         }
         else
-            show_hudmessage(0, "%L", LANG_PLAYER, "BOMB_ACTIVATED_UNKNOWN");
+            ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_ACTIVATED_UNKNOWN");
     }
     else if(iBombTimer <= iMapBombTime - 10)
     {
         set_hudmessage(255, 0, 0, -1.0, 0.8, 0, 0.1);
-        show_hudmessage(0, "%02d:%02d", (iBombTimer-1 % 3600) / 60, iBombTimer-1 % 60);
+        ShowSyncHudMsg(0, g_hHudSyncObjectTimer, "%02d:%02d", (iBombTimer-1 % 3600) / 60, iBombTimer-1 % 60);
 
         //detect players inside the bunker
         new szPlayersInsideBunker[1024] = "";
@@ -396,9 +402,9 @@ public Task_BombClock()
 
         set_hudmessage(255, 255, 255, -1.0, 0.2, 0, 1.0);
         if(iPlayersInsideBunker > 0)
-            show_hudmessage(0, "%L", LANG_PLAYER, "BOMB_INSIDE", szPlayersInsideBunker);
+            ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_INSIDE", szPlayersInsideBunker);
         else 
-            show_hudmessage(0, "%L", LANG_PLAYER, "BOMB_INSIDE_NO_ONE");
+            ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_INSIDE_NO_ONE");
     }
 }
 
@@ -530,6 +536,9 @@ CleanUp()
 
     if(task_exists(BOMB_CLOCK_ID))
         remove_task(BOMB_CLOCK_ID);
+
+    ClearSyncHud(0, g_hHudSyncObjectMessage);
+    ClearSyncHud(0, g_hHudSyncObjectTimer);
 }
 
 stock IsColliding(iEntity1, iEntity2)
