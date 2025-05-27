@@ -10,7 +10,7 @@
 #include <hamsandwich>
 
 #define PLUGIN_NAME             "Half-Life Bomb Reward System"
-#define PLUGIN_VERSION          "1.0.1-25w17a"
+#define PLUGIN_VERSION          "1.0.1-25w22a"
 #define PLUGIN_AUTHOR           "szGabu"
 
 #define BOMB_CLOCK_ID           548875487
@@ -76,6 +76,7 @@ public plugin_cfg()
         RegisterHam(Ham_Touch, "trigger_multiple", "Event_TriggerMultipleTouch_Post", true);
         RegisterHam(Ham_Use, "func_button", "Event_FuncButtonUse_Pre");
         RegisterHam(Ham_Killed, "player", "Event_PlayerKilled_Pre");
+        RegisterHam(Ham_Spawn, "player", "Event_PlayerSpawn_Post", true);
         register_message(get_user_msgid("DeathMsg"), "Message_DeathMsg");
         register_dictionary("hldm_bomb_reward.txt");
         
@@ -316,6 +317,8 @@ public Task_BombClock()
 {
     g_fBombTimer -= CLOCK_STEP;
 
+    new iPrintHUDTime = floatround(g_fBombTimer * 10, floatround_tozero);  // e.g., 0.1 -> 1, 1.0 -> 10
+
     if(g_fBombTimer < 1.0)
         remove_task(BOMB_CLOCK_ID);
 
@@ -334,9 +337,9 @@ public Task_BombClock()
         else
             ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_ACTIVATED_UNKNOWN");
     }
-    else if(iBombTimer <= iMapBombTime - 10)
+    else if(iBombTimer <= iMapBombTime - 10 && iPrintHUDTime % 10 == 0)
     {
-        set_hudmessage(255, 0, 0, -1.0, 0.8, 0, 0.1);
+        set_hudmessage(255, 0, 0, -1.0, 0.8, 0, 1.0);
         ShowSyncHudMsg(0, g_hHudSyncObjectTimer, "%02d:%02d", (iBombTimer-1 % 3600) / 60, iBombTimer-1 % 60);
 
         //detect players inside the bunker
@@ -448,6 +451,12 @@ public Event_PlayerKilled_Pre(iVictim, iAttacker, shouldgib)
     }
     
     return HAM_IGNORED;
+}
+
+public Event_PlayerSpawn_Post(iClient)
+{
+    //if a client spawned, always assume they're on the blast area
+    g_bOnBlastArea[iClient] = true; 
 }
 
 public client_disconnected(iClient)
