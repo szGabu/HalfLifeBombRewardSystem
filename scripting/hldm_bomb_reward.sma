@@ -337,7 +337,7 @@ public Task_BombClock()
         else
             ShowSyncHudMsg(0, g_hHudSyncObjectMessage, "%L", LANG_PLAYER, "BOMB_ACTIVATED_UNKNOWN");
     }
-    else if(iBombTimer <= iMapBombTime - 10 && iPrintHUDTime % 10 == 0)
+    else if(iBombTimer <= iMapBombTime - 10 && iPrintHUDTime % 5 == 0)
     {
         set_hudmessage(255, 0, 0, -1.0, 0.8, 0, 1.0);
         ShowSyncHudMsg(0, g_hHudSyncObjectTimer, "%02d:%02d", (iBombTimer-1 % 3600) / 60, iBombTimer-1 % 60);
